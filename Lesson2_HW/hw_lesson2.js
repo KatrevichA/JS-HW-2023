@@ -164,11 +164,23 @@ console.log(typeof y);
 
 // 6 step
 
-let variable = prompt('false')
-let boolean = (confirm());
-if (variable || boolean){
-    console.log('default');
+let s = NaN
+let result= s || 'default'
+console.log (result)
+
+let x1 = '';
+if (!x1){
+    x1 = 'default';
+    console.log ('default')
+}else {
+    console.log ('true')
 }
+
+//     let variable = prompt('false')
+// let boolean = (confirm());
+// if (variable || boolean){
+//     console.log('default');
+// }
 
 // 7 step
 let coursesAndDurationArray = [
