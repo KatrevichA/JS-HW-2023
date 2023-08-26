@@ -22,24 +22,23 @@ let tops = [
     {infinitive:'read', pastSimple:'read', pastParticiple:'read'},
     {infinitive:'see', pastSimple:'saw', pastParticiple:'seen'}
 ]
-// for (let i = 0; i < tops.length-10; i++) {
-//     document.write(`<div>Irregular Verbs</div>`)
-//     document.write(`<div>${tops[i].infinitive}</div>`)
-// }
+for (let i = 0; i < 10; i++) {
+    document.write(`<div>Irregular Verbs</div>`)
+}
 
 // 2 step
-// for (let top of tops) {
-//     document.write(`<div>${top.infinitive} - ${top.pastParticiple}</div>`)
-// }
+for (let i = 0; i < 10; i++) {
+    document.write(`<div>${i}-Irregular Verbs</div>`)
+}
 
 // 3.4 step
 // let i = 0;
-// while (i < tops.length) {
+// while (i < 20) {
 //     let top = tops[i];
 //     console.log(top);
 //     i++;
-//     // document.write(`<h1>Irregular Verbs</h1>`);
-//     document.write(`<h1>${top.pastSimple} - ${top.pastParticiple}</h1>`)
+//     document.write(`<h1>Irregular Verbs</h1>`);
+//     document.write(`<h1>${i} - Irregular Verbs</h1>`)
 // }
 
 // 5 step
@@ -96,12 +95,20 @@ let users = [
     {name: 'olya', age: 31, status: false},
     {name: 'max', age: 31, status: true}
 ];
+
 for (const user of users) {
     if (user.status){
-        // document.write(`<div>${user.name} ${user.status}</div>`);
-    }else if (!user.status){
-        // document.write(`<div>${user.name} ${user.status}</div>`);
-    } else if (user.age > 30){
-        document.write(`<div>${user.name}</div>`)
+        document.write(`<div>${user.name} ${user.status}</div>`);
+    }
+}
+
+for (const user of users) {
+    if (!user.status) {
+        document.write(`<div>${user.name} ${user.status}</div>`);
+    }
+}
+for (const user of users) {
+    if (user.age > 30){
+        document.write(`<div>${user.name} ${user.age}</div>`)
     }
 }
