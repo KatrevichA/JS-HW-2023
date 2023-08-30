@@ -26,7 +26,7 @@ function cylinderA (r,h) {
     let a2 = r+h;
     return a1*a2;
 }
-let lands = cylinderA (2,10);
+let lands = cylinderA (3,15);
 console.log(lands);
 
 // - створити функцію яка приймає масив та виводить кожен його елемент
@@ -130,13 +130,25 @@ function printDivArray (array) {
 printDivArray(users2);
 
 // - створити функцію яка повертає найменьше число з масиву
-function returtLnumber (array) {
-    for (let field of array) {
-        if (field.age<30)
-            document.write(`<div>age:${field.age}</div>`)
+// function returtLnumber (array) {
+//     for (let field of array) {
+//         if (field.age<30)
+//             document.write(`<div>age:${field.age}</div>`)
+//     }
+// }
+// returtLnumber(users2);
+
+function returtLnumbers (arrayNum) {
+    let min = 0;
+    for (let i = 1; i < arrayNum.length; i++) {
+        if (arrayNum[i] < min) {
+            min = arrayNum[i];
+        }
     }
+    return min;
 }
-returtLnumber(users2);
+
+console.log(returtLnumbers ([5,9,11,3,-2,7,-8,1]));
 
 // - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його.
 // Приклад sum([1,2,10]) //->13
@@ -152,17 +164,32 @@ sum (2, 48, 36, 2, 5, 4, 9);
 sum (6, 3, 8, 14, 1);
 // - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
-// ??????
-function swap (a,b,s,d,i,f){
-    console.log (b,a);
+
+function swap (arr,index1,index2){
+    let arrElement = arr[index1];
+    arr[index1]=arr[index2];
+    arr[index2]= arrElement;
+    return arr;
 }
-swap(11,22,33,44,0,1);
-swap(5,30,6,9,);
+console.log(swap([11,22,33,44],0,1));
+
+
+
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
-function exchange(uan) {
-    let USD = uan/40;
-    let EUR = uan/42;
-    document.write(`<div>USD:${USD}</div> <div>EUR:${EUR}</div>`);
+
+// function exchange(uan) {
+//     let USD = uan/40;
+//     let EUR = uan/42;
+//     document.write(`<div>USD:${USD}</div> <div>EUR:${EUR}</div>`);
+// }
+// exchange(10000);
+
+function exchange(sumUAH,currencyValues,exchangeCurrency) {
+    for (let currencyValue of currencyValues) {
+        if (currencyValue.currency===exchangeCurrency){
+            return sumUAH / currencyValue.value
+        }
+    }
 }
-exchange(10000);
+console.log(exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'EUR'))
