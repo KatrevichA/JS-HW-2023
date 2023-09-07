@@ -1,5 +1,7 @@
-// arrays and blocks
-// 1 step
+// Масиви та об'єкти:
+//
+// - Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль
+//
 let device = ['monitor', 'keyboard', 'mouse', 'laptop', 'printer', 'shredder', 'tablet', 'smartphone', 'memoryStick', 'camera'];
 console.log(device.length);
 console.log(device[0]);
@@ -12,26 +14,30 @@ console.log(device[6]);
 console.log(device[7]);
 console.log(device[8]);
 console.log(device[9]);
-// 2 step
+//
+// - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre.
+//
 let book1 = {
     title: 'Bilingual Visual Dictionary',
     pageCount: 360,
     genre: 'dictionary'
-}
+};
 console.log(book1);
 let book2 = {
     title: 'GOOGLE, How Google Works',
     pageCount: 304,
     genre: 'computer technology'
-}
+};
 console.log(book2);
 let book3 = {
     title: 'Head First JavaScript Programming',
     pageCount: 671,
     genre: 'directory'
-}
+};
 console.log (book3);
-// 3 step
+//
+// - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" - являється  масивом. Кожен автор має поля name та age.
+//
 let book1array = {
     title: 'Bilingual Visual Dictionary',
     pageCount: 360,
@@ -40,7 +46,7 @@ let book1array = {
         name: 'DK group',
         age: 79
     }]
-}
+};
 console.log (book1array);
 let book2array = {
     title: 'GOOGLE, How Google Works',
@@ -62,7 +68,9 @@ let book3array = {
     }]
 }
 console.log (book3array.authors);
-// 4 step
+//
+// - Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
+//
 let users =[
     {name: 1, username: 'James' ,password: 16252116 },
     {name: 2, username: 'Michael' ,password: '1f3647h6'},
@@ -85,20 +93,22 @@ console.log (users [6] ['password']);
 console.log (users [7] ['password']);
 console.log (users [8] ['password']);
 console.log (users [9] ['password']);
-
-// logical branching
-
-// 1 step
-
+//
+// Логічні розгалуження:
+//
+//- Є змінна х, якій ви надаєте довільне числове значення.
+//Якщо змінна x не дорівнює нулю, виведіть 'Вірно', інакше виведіть 'Невірно'. Перевірте  скрипт при a, що дорівнює 1, 0, -3
+//
 let x = 4;
 if (x !== 0){
     console.log('true')
 }else{
     console.log('false')
 }
-
-// 2 step
-
+//
+// - Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає число
+// (в першу, другу, третю или четверту частину години).
+//
 // let time = prompt ('What part of an hour!');
 // if (time >=0&&time <=14){
 //     console.log ('I');
@@ -110,10 +120,10 @@ if (x !== 0){
 //     console.log ('VI');
 // } else {
 //     console.log ('What do you want to know?')
-// }
-
-// 3 step
-
+// };
+//
+// - У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
+//
 // let day =prompt ('Decade of the month!');
 // if (day >=1&& day <=10){
 //     console.log ('I decade');
@@ -121,10 +131,10 @@ if (x !== 0){
 //     console.log ('II decade');
 // } else if (day >=21&&day <=31){
 //     console.log ('III decade')
-// }
-
-// 4 step
-
+// };
+//
+// - Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день (можна замість плану на день, назву дня англійською).
+//
 // let week = prompt('Timetable for week');
 // switch (week){
 //     case '1':
@@ -147,10 +157,12 @@ if (x !== 0){
 //         break;
 //     case '7':
 //         console.log ('holiday')
-// }
-
-// 5 step
-
+// };
+//
+// - Користувач вводить або має два числа.
+//   Потрібно знайти та вивести максимальне число з тих двох .
+//   Також потрібно врахувати коли введені рівні числа.
+//
 let y = 12;
 let a = 18;
 if (y > a){
@@ -161,12 +173,13 @@ if (y > a){
     console.log ('same')
 }
 console.log(typeof y);
-
-// 6 step
-
-let s = NaN
-let result= s || 'default'
-console.log (result)
+//
+// - є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,
+//   за допомоги  оператора || буде присвоювати змінній х значення "default"  якщо значення змінної х являється falsy (хибноподібні, тобто приводиться до false)
+//
+// let s = NaN
+// let result= s || 'default'
+// console.log (result)
 
 let x1 = '';
 if (!x1){
@@ -175,14 +188,9 @@ if (!x1){
 }else {
     console.log ('true')
 }
-
-//     let variable = prompt('false')
-// let boolean = (confirm());
-// if (variable || boolean){
-//     console.log('default');
-// }
-
-// 7 step
+//
+// - з файлу arrays.js (лежить в папці 2023 plan ) взяти масив coursesAndDurationArray. За допомоги іф перевірити кожен його елемент на тривалість навчання. У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер".
+//
 let coursesAndDurationArray = [
     {title: 'JavaScript Complex', monthDuration: 5},
     {title: 'Java Complex', monthDuration: 6},
@@ -210,3 +218,4 @@ if (coursesAndDurationArray [4].monthDuration > 5){
 if (coursesAndDurationArray [5].monthDuration > 5){
     console.log ('Cool!')
 }
+//
