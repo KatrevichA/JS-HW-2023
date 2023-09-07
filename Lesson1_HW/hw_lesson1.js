@@ -52,8 +52,8 @@ console.log(typeof c);
 //
 let firstName1 = prompt('Yours Name!');
 let middleName1 = prompt('Yours Middle Name!');
-let lastName1 = prompt('Yours Last Name!');
-let connect = `${firstName1} ${middleName1} ${lastName1}`;
+let yYars = prompt('How Old Are You?');
+let connect = `${firstName1} ${middleName1} ${yYars}`;
 console.log(connect);
 //
 
